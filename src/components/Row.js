@@ -25,14 +25,17 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
           (movie, index) =>
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
-              <img
-                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                key={index}
-                src={`${base_url}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie.name}
-              />
+              <>
+                <img
+                  className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                  key={index}
+                  src={`${base_url}${
+                    isLargeRow ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.name}
+                />
+                {/* <div className="row__movieName">{movie.name}</div> */}
+              </>
             )
         )}
       </div>
