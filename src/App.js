@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen";
 
 function App() {
-  const user = "1";
+  const user = null;
 
   return (
     <div className="app">
